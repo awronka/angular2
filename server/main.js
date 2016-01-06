@@ -5,7 +5,6 @@ var path = require('path');
 var request = require('request')
 
 app.get('/', function(req,res,next){
-	console.log("This is the dirname"+__dirname)
 	res.sendFile(path.join(__dirname+'/main.html'))
 	
 })
