@@ -45,19 +45,26 @@ ajax.get = function(url, data, callback, sync) {
     ajax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, sync)
 };
 
+
+
 function getData(){
    var artist = document.getElementById('artist').value;
+    
     ajax.get('/albums/'+ artist, {}, function(data) {
         data = JSON.parse(data)
-        var node = document.getElementById("album-list")
+        addDomElements(document.getElementById("album-list"),data)
+    });
+}
+
+
+function addDomElements(node,data){
         while (node.firstChild) {
                 node.removeChild(node.firstChild);
             }
-        
+            
         for(var i =0; i<data.results.length;i++){
             var variable = document.createElement('div')
                 variable.innerHTML = data.results[i].collectionName;
                 node.appendChild(variable)
         }
-    });
 }

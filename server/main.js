@@ -5,10 +5,15 @@ var path = require('path');
 var request = require('request')
 
 app.get('/', function(req,res,next){
-	res.sendFile(path.join(__dirname+'/main.html'))
+	res.sendFile(path.join(__dirname+'/index.html'))
 	
 })
 
+app.get('/albums/:artist', function(req,res,next){
+    get(req.params.artist, function(data){
+        res.json(data)
+    })
+})
 
 app.use(express.static('public'))
 
@@ -20,11 +25,7 @@ var server = app.listen(port, function(){
 	console.log('Example is listenting at', port, host)
 })
 
-app.get('/albums/:artist', function(req,res,next){
-    get(req.params.artist, function(data){
-        res.json(data)
-    })
-})
+
 
 function get(artist, callback) {
 
