@@ -15,7 +15,7 @@ app.get('/albums/:artist', function(req,res,next){
     })
 })
 
-app.use(express.static('public'))
+app.use(express.static('browser'))
 
 var port = 7777;
 
