@@ -11,3 +11,49 @@ button{
 #album-list div{
     margin-top: 2px;
 }
+
+.trigger-container{
+	left: 0;
+	right: 0;
+	margin: 20px auto;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	background-color: lightgray;
+	border-bottom: 2px solid grey;
+	border-right: 2px solid grey;
+	color: white;
+	font-size: 12px;
+	a{
+		text-decoration: none;
+		color: white;
+	}
+	a:hover{
+		text-decoration: none;
+
+	}
+	a:focus{
+		text-decoration: none;
+
+	}
+
+}
+
+.inside{
+
+	left: 0;
+	right: 0;
+	margin: 20px auto;
+	width: 100px;
+	height: 25px;
+	background-color: blue;
+
+}
+
+.active{
+	background-color: lightblue;
+}
+
+.red{
+	background-color: red;
+}
