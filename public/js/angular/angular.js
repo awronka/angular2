@@ -21,6 +21,7 @@ app.controller('homeCtrl', function($scope, $state, $timeout, myFactory){
 	$scope.check = 'lalalala'
 	$scope.data = [1,2,3,4,5,6,7,8,9,10];
 	console.log(myFactory.getNum())
+
 })
 
 app.directive('footer', function(){
@@ -32,6 +33,7 @@ app.directive('footer', function(){
 		templateUrl: 'js/angular/footer.html',
 		link: function(scope,elem,attrs){
 			console.log(scope.data)
+			console.log(scope.data + 'this is awesome')
 		}
 
 
