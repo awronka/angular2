@@ -33,7 +33,7 @@ app.directive('footer', function(){
 		templateUrl: 'js/angular/footer.html',
 		link: function(scope,elem,attrs){
 			console.log(scope.data)
-			console.log(scope.data + 'this is awesome')
+			console.log(scope.data + 'this is awesomegit ')
 		}
 
 
@@ -58,13 +58,12 @@ app.factory('myFactory', function(){
 		getNum: function(){
 			return Math.floor(Math.random()*100)
 		}
-	}
-})
+	}})
 
-// app.service('myService', function(){
-// 	return {
-// 		getNum: function(){
-// 			return Math.floor(Math.random()*100)
-// 		}
-// 	}
-// })
+
+d3.select('body')
+	.append('svg')
+	.attr({
+		height: 600,
+		width: 700
+	})

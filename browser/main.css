@@ -42,3 +42,6 @@ button {
 
 .red {
   background-color: red; }
+
+svg {
+  border: 1px dotted black; }
