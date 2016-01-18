@@ -33,7 +33,8 @@ app.directive('footer', function(){
 		templateUrl: 'js/angular/footer.html',
 		link: function(scope,elem,attrs){
 			console.log(scope.data)
-			console.log(scope.data + 'this is awesomegit ')
+			console.log(scope.data + 'this is awesome')
+
 		}
 
 
