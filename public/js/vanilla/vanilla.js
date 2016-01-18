@@ -17,75 +17,75 @@
 //   }
 // };
 
-document.addEventListener('DOMContentLoaded', function(){
-  console.log('loaded')
-  var trigger = document.getElementById('trigger')
-  trigger.addEventListener('click', addClassToTarget)
-  console.log(trigger)
+// document.addEventListener('DOMContentLoaded', function(){
+//   console.log('loaded')
+//   var trigger = document.getElementById('trigger')
+//   trigger.addEventListener('click', addClassToTarget)
+//   console.log(trigger)
 
-  var anchor = document.getElementsByTagName('a')[0]
-  console.log(anchor)
+//   var anchor = document.getElementsByTagName('a')[0]
+//   console.log(anchor)
 
-  anchor.addEventListener('click', function(){
-    if(!target.classList.contains('red')){
-      target.classList.add('red')
-      trigger.removeEventListener('click', addClassToTarget)
-    }
-    else(
-      target.classList.remove('red')
-      )
-      event.stopImmediatePropagation()
-  })
+//   anchor.addEventListener('click', function(){
+//     if(!target.classList.contains('red')){
+//       target.classList.add('red')
+//       trigger.removeEventListener('click', addClassToTarget)
+//     }
+//     else(
+//       target.classList.remove('red')
+//       )
+//       event.stopImmediatePropagation()
+//   })
 
-  var Nessy = document.querySelector('.monsters')
-  var AllMonsters = document.querySelectorAll('.monsters')
+//   var Nessy = document.querySelector('.monsters')
+//   var AllMonsters = document.querySelectorAll('.monsters')
 
-  console.log(Nessy, AllMonsters)
-  Nessy.addEventListener('click', function(){
-    Nessy.innerHTML = '<li class="monster" style="color:red;">Nessy</li>'
+//   console.log(Nessy, AllMonsters)
+//   Nessy.addEventListener('click', function(){
+//     Nessy.innerHTML = '<li class="monster" style="color:red;">Nessy</li>'
 
-  })
+//   })
 
-  AllMonsters[1].addEventListener('mouseover', function(){
-    AllMonsters[1].textContent= "Godzilla"
-  })
-  AllMonsters[1].addEventListener('mouseout', function(){
-    AllMonsters[1].textContent='Big Foot'
-  })
-
-
-  var div = document.createElement('div')
-  div.setAttribute('style', 'color:blue;');
-  div.textContent='Homer';
-    AllMonsters[2].appendChild(div)
-
-target.addEventListener('click', function(){
-  var list = document.getElementsByTagName('ul')[0];
-  console.log(list)
-  console.log(list.children)
-  console.log(list.lastChild)
-  list.removeChild(list.lastChild)
+//   AllMonsters[1].addEventListener('mouseover', function(){
+//     AllMonsters[1].textContent= "Godzilla"
+//   })
+//   AllMonsters[1].addEventListener('mouseout', function(){
+//     AllMonsters[1].textContent='Big Foot'
+//   })
 
 
-    console.log(trigger.nextElementSibling)
-    console.log(trigger.nextSibling)
-        console.log(trigger.nextSibling.nextSibling)
+//   var div = document.createElement('div')
+//   div.setAttribute('style', 'color:blue;');
+//   div.textContent='Homer';
+//     AllMonsters[2].appendChild(div)
+
+// target.addEventListener('click', function(){
+//   var list = document.getElementsByTagName('ul')[0];
+//   console.log(list)
+//   console.log(list.children)
+//   console.log(list.lastChild)
+//   list.removeChild(list.lastChild)
+
+
+//     console.log(trigger.nextElementSibling)
+//     console.log(trigger.nextSibling)
+//         console.log(trigger.nextSibling.nextSibling)
 
 
 
-})
+// })
 
 
-  })
+//   })
 
 
-function  addClassToTarget(){
-      var target = document.querySelector('#target');
-      console.log(target)
-      target.classList.toggle('active')
-      // event.preventDefault()
-      // event.stopImmediatePropagation();
-  }
+// function  addClassToTarget(){
+//       var target = document.querySelector('#target');
+//       console.log(target)
+//       target.classList.toggle('active')
+//       // event.preventDefault()
+//       // event.stopImmediatePropagation();
+//   }
 // console.log(document)
 // var monster = document.querySelectorAll('.monsters')
 
