@@ -62,9 +62,9 @@ app.factory('myFactory', function(){
 	}})
 
 
-d3.select('body')
-	.append('svg')
-	.attr({
-		height: 600,
-		width: 700
-	})
+// d3.select('body')
+// 	.append('svg')
+// 	.attr({
+// 		height: 600,
+// 		width: 700
+// 	})
