@@ -36,3 +36,32 @@ div + p{
 div ~ p{
 	color: blue;
 }
+
+a[title]{
+	text-decoration:none;
+	color: pink;
+}
+
+a[href="google.com"]{
+	color: purple;
+}
+
+a[href^="www"]{
+	color: yellow;
+}
+
+a[href$=".com"]{
+	color: black;
+}
+
+a[href*='.net']{
+	color: grey;
+}
+
+text:not(#container){
+	color:red;
+}
+
+p::first-line{
+	font-size: 20px;
+}
