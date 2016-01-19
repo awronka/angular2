@@ -1,63 +1,65 @@
-.input-box{
-    margin: 50px auto 0px auto;
-    width: 400px;
-    align-content: center;
-}
+// .input-box{
+//     margin: 50px auto 0px auto;
+//     width: 400px;
+//     align-content: center;
+// }
 
-button{
-    float: right;
-}
+// button{
+//     float: right;
+// }
 
-#album-list div{
-    margin-top: 2px;
-}
+// #album-list div{
+//     margin-top: 2px;
+// }
 
-.trigger-container{
-	left: 0;
-	right: 0;
-	margin: 20px auto;
-	width: 200px;
-	height: 50px;
-	text-align: center;
-	background-color: lightgray;
-	border-bottom: 2px solid grey;
-	border-right: 2px solid grey;
-	color: white;
-	font-size: 12px;
-	a{
-		text-decoration: none;
-		color: white;
-	}
-	a:hover{
-		text-decoration: none;
+// .trigger-container{
+// 	left: 0;
+// 	right: 0;
+// 	margin: 20px auto;
+// 	width: 200px;
+// 	height: 50px;
+// 	text-align: center;
+// 	background-color: lightgray;
+// 	border-bottom: 2px solid grey;
+// 	border-right: 2px solid grey;
+// 	color: white;
+// 	font-size: 12px;
+// 	a{
+// 		text-decoration: none;
+// 		color: white;
+// 	}
+// 	a:hover{
+// 		text-decoration: none;
 
-	}
-	a:focus{
-		text-decoration: none;
+// 	}
+// 	a:focus{
+// 		text-decoration: none;
 
-	}
+// 	}
 
-}
+// }
 
-.inside{
+// .inside{
 
-	left: 0;
-	right: 0;
-	margin: 20px auto;
-	width: 100px;
-	height: 25px;
-	background-color: blue;
+// 	left: 0;
+// 	right: 0;
+// 	margin: 20px auto;
+// 	width: 100px;
+// 	height: 25px;
+// 	background-color: blue;
 
-}
+// }
 
-.active{
-	background-color: lightblue;
-}
+// .active{
+// 	background-color: lightblue;
+// }
 
-.red{
-	background-color: red;
-}
+// .red{
+// 	background-color: red;
+// }
 
-svg{
-	border: 1px dotted black;
-}
+// svg{
+// 	border: 1px dotted black;
+// }
+
+@import 'media';
