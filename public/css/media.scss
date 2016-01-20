@@ -1,67 +1,86 @@
 
-@media screen and (max-width: 1200px) {
+// @media screen and (max-width: 1200px) {
 
-div {
-	width: 200px;
-	margin: 10px;
-	height: 50px;
-	background: red;
+// div {
+// 	width: 200px;
+// 	margin: 10px;
+// 	height: 50px;
+// 	background: red;
 
+// }
+
+// }
+
+// li a{
+// 	text-decoration: none;
+// }
+
+
+
+// @media print {
+// 	div {
+// 	width: 100px;
+// 	height: 200px;
+// 	background: blue;
+// 	color: red;
+// 	font-size: 24px;
+
+// }
+
+// }
+
+// div + p{
+// 	color: green;
+// }
+
+// div ~ p{
+// 	color: blue;
+// }
+
+// a[title]{
+// 	text-decoration:none;
+// 	color: pink;
+// }
+
+// a[href="google.com"]{
+// 	color: purple;
+// }
+
+// a[href^="www"]{
+// 	color: yellow;
+// }
+
+// a[href$=".com"]{
+// 	color: black;
+// }
+
+// a[href*='.net']{
+// 	color: grey;
+// }
+
+// text:not(#container){
+// 	color:red;
+// }
+
+// p::first-line{
+// 	font-size: 20px;
+// }
+
+.hover-rect{
+	fill: rgba(255,0,0,0)
 }
 
+.hover-rect:hover{
+fill: rgba(255,0,0,.5);
 }
 
-li a{
-	text-decoration: none;
-}
 
 
 
-@media print {
-	div {
-	width: 100px;
-	height: 200px;
-	background: blue;
-	color: red;
-	font-size: 24px;
 
-}
 
-}
 
-div + p{
-	color: green;
-}
 
-div ~ p{
-	color: blue;
-}
 
-a[title]{
-	text-decoration:none;
-	color: pink;
-}
 
-a[href="google.com"]{
-	color: purple;
-}
 
-a[href^="www"]{
-	color: yellow;
-}
-
-a[href$=".com"]{
-	color: black;
-}
-
-a[href*='.net']{
-	color: grey;
-}
-
-text:not(#container){
-	color:red;
-}
-
-p::first-line{
-	font-size: 20px;
-}
