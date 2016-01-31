@@ -6,7 +6,6 @@ app.config(function($urlRouterProvider, $locationProvider){
 	$urlRouterProvider.otherwise('/')
 })
 
-
 app.config(function($stateProvider){
 	$stateProvider.state('home',{
 		url: '/',
@@ -17,10 +16,14 @@ app.config(function($stateProvider){
 
 })
 
-app.controller('homeCtrl', function($scope, $state, $timeout, myFactory){
+app.controller('homeCtrl', function($scope, $state, $timeout, $http, myFactory){
 	$scope.check = 'lalalala'
 	$scope.data = [1,2,3,4,5,6,7,8,9,10];
 	console.log(myFactory.getNum())
+
+	$scope.signUp = function(){
+		console.log('boom')
+	}
 
 })
 

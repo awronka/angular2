@@ -1,43 +1,52 @@
-var express = require('express');
-var app = express();
-var serveStatic = require('serve-static');
-var path = require('path');
-var request = require('request')
+'use strict';
 
-app.get('/', function(req,res,next){
-	res.sendFile(path.join(__dirname+'/index.html'))
-	
-})
+var chalk = require('chalk');
 
-app.get('/albums/:artist', function(req,res,next){
-    get(req.params.artist, function(data){
-        res.json(data)
-    })
-})
+var startDb = require('./db');
+var app = require('./app');
 
+var server = require('http').createServer();
 
-app.use(express.static('node_modules'))
-app.use(express.static('browser'))
-app.use(express.static('public'))
+var createApplication = function() {
+  server.on('request', app);
+};
 
-var port = 7777;
+var startServer = function () {
+    // Allow user to specify port number from console
+    var PORT = process.argv[2] && !isNaN(Number(process.argv[2]))? Number(process.argv[2]) : process.env.PORT || 1337;
+    server.listen(PORT, function () {
+        console.log(chalk.green('Server started on port', chalk.blue(PORT)));
+    });
+};
 
-var server = app.listen(port, function(){
-	var host = server.address().adress;
-	var port = server.address().port;
-	console.log('Example is listenting at', port, host)
-})
+startDb.then(createApplication)
+.then(startServer)
+.catch(function(err){
+  console.error(chalk.red(err.stack));
+  process.kill(1);
+});
 
 
+// function get(artist, callback) {
 
-function get(artist, callback) {
-
-  request('http://itunes.apple.com/search?term='+ artist + '&attribute=artistTerm&entity=album&limit=300', function(err, response, body) {
+//   request('http://itunes.apple.com/search?term='+ artist + '&attribute=artistTerm&entity=album&limit=300', function(err, response, body) {
    
-    callback( JSON.parse(body) )
-  })
+//     callback( JSON.parse(body) )
+//   })
 
-}
+// }
+
+// app.get('/', function(req,res,next){
+//  res.sendFile(path.join(__dirname+'/index.html'))
+  
+// })
+
+// app.get('/albums/:artist', function(req,res,next){
+//     get(req.params.artist, function(data){
+//         res.json(data)
+//     })
+// })
+
 
 
 // var express = require('express')
