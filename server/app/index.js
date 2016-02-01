@@ -32,11 +32,15 @@ app.engine('html', swig.renderFile);
 app.setValue('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
+// Set root directory path
+app.setValue('root', path.join(__dirname, '../../'));
+
 
 // Allowing 'index.html' to access files in the following folders
-app.use(express.static('node_modules'))
-app.use(express.static('browser'))
-app.use(express.static('public'))
+var root = app.getValue('root');
+app.use(express.static(path.join(root, './node_modules')));
+app.use(express.static(path.join(root, './public')));
+app.use(express.static(path.join(root, './browser')));
 
 // Views cache
 app.setValue('view cache', true);
@@ -49,7 +53,7 @@ app.use((req, res, next) => {
 });
 
 // All data routes will be prefaced with /api
-app.use('/api', require('../router'));
+app.use('/api', require('./router'));
 
 // All get routes that go through the pipeline, past /api, will get the single page layout
 app.get('/*', (req, res) => {

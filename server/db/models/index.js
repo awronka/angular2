@@ -1,3 +1,3 @@
 //initialize models
-require('./user');
+require('./siteuser');
 require('./comment');

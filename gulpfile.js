@@ -17,6 +17,8 @@ var karma = require('karma').server;
 var istanbul = require('gulp-istanbul');
 var notify = require('gulp-notify');
 
+require('babel-core/register');
+
 
 // Development tasks
 // --------------------------------------------------------------
