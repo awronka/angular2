@@ -1,6 +1,7 @@
 <div>otherplace yall</div>
-<div>{{variable}}</div>
-<div>{{reveal}}</div>
-<div ng-repeat="user in users">{{user._id}}</div>
+<div>{{view.variable}}</div>
+<div>{{view.reveal}}</div>
+<div ng-repeat="user in view.users">{{user._id}}</div>
 {{users[0]}}
-<a ui-sref="home({user:users[0]})">go home</a>
+<a ui-sref="home({user:view.users[0]})">go home</a>
+<div ng-controller="childCtrl as child">{{child.value}} childCtrl</div>

@@ -20,4 +20,4 @@ siteUser.pre('save', function(next){
 	next()
 })
 
-mongoose.model('siteUser', siteUser);
+module.exports = mongoose.model('siteUser', siteUser);

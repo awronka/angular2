@@ -8,7 +8,8 @@ app.config(function($stateProvider){
 			users : function(myFactory){
 				return myFactory.getAll()
 			}
-		}
+		},
+		controllerAs: 'view'
 	})
 
 })

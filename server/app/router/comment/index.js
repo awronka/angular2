@@ -1,8 +1,8 @@
 var router = require('express').Router(),
     mongoose = require('mongoose'),
-    bluebird = require('bluebird'),
-    UserComment = mongoose.model('Comment');
-    UserComment = bluebird.promisifyAll(UserComment);
+    Promise = require('bluebird'),
+    UserComment = require('../../../db/models').comment
+    UserComment = Promise.promisifyAll(UserComment);
 
 router.get('/', function(req, res, next) {
     UserComment.find().then(function(comments) {
@@ -18,6 +18,10 @@ router.post('/', function(req, res, next) {
         res.json(comment);
     });
 });
+
+router.testFunc = function(num){
+    return num+2;
+}
 
 module.exports = router;
 

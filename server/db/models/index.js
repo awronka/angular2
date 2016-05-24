@@ -1,3 +1,5 @@
 //initialize models
-require('./siteuser');
-require('./comment');
+module.exports = {
+	siteUser: require('./siteuser'),
+    comment: require('./comment')
+}

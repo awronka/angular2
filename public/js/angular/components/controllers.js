@@ -1,8 +1,8 @@
 app.controller('otherCtrl',[ "$scope", "$state", "hexafy","randomVariable","users",function($scope, $state, hexafy, randomVariable, users){
 	console.log('hit this')
-	$scope.reveal = randomVariable;
-	$scope.variable = hexafy.myFunc(1324)
-	$scope.users = users.data;
+	this.reveal = randomVariable;
+	this.variable = hexafy.myFunc(1324)
+	this.users = users.data;
 
 }])
 
@@ -34,5 +34,9 @@ app.controller('homeCtrl', function($scope, $state, $stateParams, $timeout, $htt
 		})
 	}
 
+})
+
+app.controller('childCtrl', function($scope){
+	this.value = 'this is a child controller';
 })
 

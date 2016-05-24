@@ -8,25 +8,6 @@ siteUser = Promise.promisifyAll(siteUser)
 Router.use('/comment', require('./comment'))
 Router.use('/siteuser', require('./siteuser'))
 
-// console.log(siteUser)
-// Router.get('/', function(req,res,next){
-// 	siteUser.find().then(function(user){
-// 		console.log(user[0])
-// 		res.json(user)
-
-// 	})
-// })
-
-// Router.post('/', function(req,res,next){
-// 	siteUser.create(req.body).then(function(user){
-// 		console.log(user)
-// 		res.json(user)
-// 	}).catch(function(err){
-// 		console.log('there is an error')
-//         return next(err);
-//     });
-// })
-
 
 //send error if route not found
 Router.use(function(req,res){

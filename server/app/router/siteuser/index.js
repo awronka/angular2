@@ -1,13 +1,13 @@
 var router = require('express').Router();
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
-var siteUser = mongoose.model('siteUser')
-	siteUser = Promise.promisifyAll(siteUser)
-	Promise.promisifyAll(siteUser.prototype)
+var SiteUser = require('../../../db/models').siteUser;
+	SiteUser = Promise.promisifyAll(SiteUser)
+	// Promise.promisifyAll(SiteUser.prototype)
 
 
 router.get('/', function(req,res,next){
-	siteUser.find().then(function(user){
+	SiteUser.find().then(function(user){
 		console.log(user[0])
 		res.json(user)
 
@@ -15,7 +15,7 @@ router.get('/', function(req,res,next){
 })
 
 router.post('/', function(req,res,next){
-	var newUser = new siteUser();
+	var newUser = new SiteUser();
 	newUser.email = req.body.email;
 	newUser.firstName = req.body.firstName;
 	console.log(newUser.prototype)
@@ -46,7 +46,7 @@ router.post('/', function(req,res,next){
 
 router.delete('/:email', function(req,res,next){
 	console.log(req.params)
-	siteUser.findOneAndRemoveAsync({email:req.params.email}).then(function(user){
+	SiteUser.findOneAndRemoveAsync({email:req.params.email}).then(function(user){
 		res.json(user)
 	})
 	.catch(function(err){
