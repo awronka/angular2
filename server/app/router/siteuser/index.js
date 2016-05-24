@@ -46,14 +46,14 @@ router.post('/', function(req,res,next){
 
 router.delete('/:email', function(req,res,next){
 	console.log(req.params)
-	siteUser.findOneAndRemove({email:req.params.email}).then(function(user){
+	siteUser.findOneAndRemoveAsync({email:req.params.email}).then(function(user){
 		res.json(user)
 	})
-	// .catch(function(err){
-	// 	res.status(500).send({
-	// 		message: 'user does not exist'
-	// 	})
-	// })
+	.catch(function(err){
+		res.status(500).send({
+			message: 'user does not exist'
+		})
+	})
 })
 
 

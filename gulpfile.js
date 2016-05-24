@@ -45,7 +45,7 @@ gulp.task('lintJS', function () {
 });
 
 gulp.task('buildJS', ['lintJS'], function () {
-    return gulp.src(['./public/js/main.js', './public/js/**/*.js'])
+    return gulp.src(['./public/js/main.js', './public/js/**/*.js','./public/js/**/**/*.js'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
