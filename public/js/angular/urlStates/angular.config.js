@@ -12,4 +12,9 @@ app.config(function($stateProvider){
 		controllerAs: 'view'
 	})
 
+	$stateProvider.state('portfolio', {
+		url:'/portfolio',
+		controller: 'portfolioCtrl',
+		templateUrl: 'js/angular/components/portfolio.html'
+	})
 })

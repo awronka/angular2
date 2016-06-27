@@ -14,6 +14,40 @@ router.get('/', function(req,res,next){
 	})
 })
 
+router.get('/:email', function(req,res,next){
+	console.log('hit this')
+	SiteUser.findOne({email: req.params.email}).then(function(user){
+		console.log(user[0])
+		res.json(user)
+	})
+})
+
+router.post('/addStock', function(req,res,next){
+	SiteUser.findOne({email: req.body.email}).then(function(user){
+		user = Promise.promisifyAll(user);
+		user.stock_count ? user.stock_count++ : user.stock_count = 1;
+		if(!user.portfolio) user.portfolio = [];
+		user.portfolio.push(req.body.stock);
+		console.log(user)
+		res.send('this sucks')
+		// user.save().then(function(newuser){
+		// res.status(200).json(newuser)
+		// })
+		// .catch(function(err){
+		// 	res.status(500).send({
+		// 		message: 'Problem'
+		// 	})
+		// })
+	})
+})
+
+router.post('/save/:id', function(req,res,next){
+	SiteUser.findByIdAndUpdate(req.params.id, {$set: req.body},function(err, update){
+		if(err)console.log(err)
+		res.send(update)
+	})
+})
+
 router.post('/', function(req,res,next){
 	var newUser = new SiteUser();
 	newUser.email = req.body.email;

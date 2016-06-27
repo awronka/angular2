@@ -3,3 +3,43 @@
 
 .hover-rect:hover {
   fill: rgba(255, 0, 0, 0.5); }
+
+@media (max-width: 600px) {
+  .header {
+    background-color: lightcoral;
+    height: 10vh;
+    align-content: left;
+    display: flex;
+    justify-content: flex-end; }
+    .header ul {
+      display: none; }
+    .header .select-box {
+      width: 50%;
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid black;
+      color: purple;
+      background-color: pink;
+      border-radius: 0px !important;
+      -webkit-border-radius: 0px !important;
+      -webkit-appearance: none; }
+      .header .select-box option:hover {
+        -webkit-background-color: yellow !important;
+        background-color: yellow !important; } }
+
+@media (min-width: 601px) {
+  .header {
+    background-color: lightblue;
+    height: 10vh;
+    align-content: left; }
+    .header ul {
+      width: 100%;
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      justify-content: flex-end; }
+      .header ul li {
+        padding: 10px;
+        margin: 10px; }
+    .header select {
+      display: none; } }

@@ -47,7 +47,8 @@
     "run-sequence": "^1.1.5",
     "serve-static": "^1.10.0",
     "swig": "^1.4.2",
-    "ui-router": "^0.2.15"
+    "ui-router": "^0.2.15",
+    "yahoo-finance": "^0.2.12"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
@@ -58,6 +59,7 @@
     "jasmine": "^2.4.1",
     "jasmine-spec-reporter": "^2.4.0",
     "mocha": "^2.5.1",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "request": "^2.72.0"
   }
 }

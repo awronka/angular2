@@ -10,6 +10,9 @@ var siteUser = new mongoose.Schema({
     	required: true
     },
     firstName: String,
+    portfolio: mongoose.Schema.Types.Mixed,
+    lastAccessed: Date,
+    stock_count: Number,
     lastName: String,
     photo: String});
 

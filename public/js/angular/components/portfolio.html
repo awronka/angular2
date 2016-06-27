@@ -1,0 +1,22 @@
+<div class='col-md-1'>
+<form ng-submit="getUser(email)"id="sign-up" name="signIn">
+<label>Find User</label>
+	<input ng-model="email" placehoder="add stock ticker to portfolio">
+	<button type="submit"> submit</button>
+</form>
+<h1>Name : {{user.firstName}}</h1>
+<form ng-submit="addStock(addTicker)"id="sign-up" name="signIn">
+<label>Ticker Symbol</label>
+	<input ng-model="addTicker" placehoder="add stock ticker to portfolio">
+	<button type="submit"> submit</button>
+</form>
+<div> tempStock = {{tempStock}}</div>
+<label>shares</label>
+<input ng-model="shares">
+<button ng-click="addStockToPort(tempStock, user.email, shares)">add stock to port</button>
+
+<div ng-repeat="stock in user.portfolio">
+	<div>{{stock.name}} : {{stock.lastTradePriceOnly}} : {{stock.lastTradePriceOnly * stock.shares}} </div><a ng-click='removeStocks(stock)'> remove </a>
+</div>
+<button ng-click="savePortfolio()">savePortfolio</button>
+</div>

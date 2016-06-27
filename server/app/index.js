@@ -60,4 +60,18 @@ app.get('/*', (req, res) => {
     res.render('index');
 });
 
+// function get(artist, callback) {        
+    
+//    request('http://itunes.apple.com/search?term='+ artist + '&attribute=artistTerm&entity=album&limit=300', function(err, response, body) {     
+        
+//      callback( JSON.parse(body) )       
+//    })       
+    
+//  }      
+    
+//  app.get('/stocks', function(req,res,next){       
+                
+//  })     
+    
+
 module.exports = app;
