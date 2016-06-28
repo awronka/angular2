@@ -19,6 +19,8 @@ app.controller('homeCtrl', function($scope, $state, $stateParams, $timeout, $htt
 			console.log(res)
 		})
 	}
+	
+	 $(".new-select").select2();
 
 	$scope.getAll = function(){
 		myFactory.getAll().then(function(res){
