@@ -5,66 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<title>Simple Server</title>
 		<link rel="stylesheet" type='text/css' href="main.css"/>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js" type="text/javascript" charset="utf-8" async defer></script>
-        <script src='/angular/angular.js'></script>
-        <script src='ui-router/release/angular-ui-router.js'></script>
+		<script src="/zone.js/dist/zone.js"></script>
+		<script src="/reflect-metadata/Reflect.js"></script>
+
+		<script src="/rxjs/bundles/Rx.umd.js"></script>
+		<script src="/@angular/core/bundles/core.umd.js"></script>
+		<script src="/@angular/common/bundles/common.umd.js"></script>
+		<script src="/@angular/compiler/bundles/compiler.umd.js"></script>
+		<script src="/@angular/platform-browser/bundles/platform-browser.umd.js"></script>
+		<script src="/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
 		<script src="main.js"></script>
-<script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>		
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-  $(".js-example-basic-single").select2();
-});
-</script>
 	</head>
-	<body ng-app="myApp">
-		<div id="container"></div>
-<!--         <div class='input-box'>
-            Artist Name: <input class="form-control" id="artist" type="text" name="ArtistName" placeholder="Nirvana"><br>
-            <button class="btn btn-success"onclick="getData()">Get Albums</button>
-            <div id="album-list"></div>
-        <div> -->
-<!-- 	        <div><span>Here is some text</span></div>
-	        <li><a>No Text decoration</a></li>
-	        <div></div><p>Here is some text</p>
-			<div><span></span></div><p>Here is some more text</p>
-			<a title="bob">bob</a>
-			<a>bob</a>
-
-			<a href="google.com">google</a>
-			<a href="wronkaworld.com">wronkaworld</a>
-
-			<a href="www.doodle">google</a>
-			<a href="www.happy">wronkaworld</a>		        
-			<a href="doodle.com">google</a>
-			<a href="happy.com">wronkaworld</a>
-
-			<a href="doodle.net">google</a>
-			<a href="happy.net">wronkaworld</a>	
-			<a href="doodle.org">google</a>
-			<a href="happy.net">wronkaworld</a>	
-
-			<text> some text</text>	
-			<text id="container"> some text</text>	
-			<text> some text</text>	
-			<text> some text</text>	
-
-			<p>dsfahdsafdsafl;ksdafjlk
-			adslkflk;sdfkl;sjdkaf
-			aldskf;jsdafjdalf
-			adslf;jsdfl</p> -->
-        <div id="main" ui-view></div>
-        <footer data="something"></footer>
-<!--         <div href='#target'class="trigger-container" id="trigger"><div class="inside"><a  >the trigger</a></div></div>
-        <div class="trigger-container" id='target'>the target</div>
-        <ul>
-	    <li class="monsters">Nessy</li>
-	    <li class="monsters">Big Foot</li>
-	    <li class="monsters">La Chupacabra</li>
-		</ul> -->
+	<body>
+ <my-app>Loading...</my-app>
 
 	</body>
 </html>
